@@ -2,10 +2,9 @@ def somaSal(sal_func):
     count = 0
     soma = 0
 
-    while count < 12:
-        soma = (soma + sal_func[count])
+    for i in range(0,12):
+        soma = soma + sal_func[count]
         count = count + 1
-
     return soma
 
 def mediaSal(sal_func):
@@ -30,9 +29,16 @@ def calculaImpostoRenda(soma_sal):
         imposto_renda = soma_sal * 0.275
         return imposto_renda
 
+def calculaPoupanca(sal_func, gasto_func)
+    for i in range(0,12):
+        poupanca = sal_func[i] - gasto_func[i]
+    return poupanca
+
+
 print("Sistema do Funcionário")
 
 sal_func = []
+gasto_func = []
 
 nome_func = input("Nome do Funcionário: ")
 sobrenome_func = input("Sobrenome do Funcionário: ")
@@ -40,8 +46,15 @@ sobrenome_func = input("Sobrenome do Funcionário: ")
 count = 0
 
 while count < 12:
-    sal_func.append(int(input("Informe o salário do Mês "+str(count+1)+" : ")))
-    count = count + 1
+    try:
+        sal = float(input("Informe o salário do Mês "+str(count+1)+" : "))
+        sal_func.append(sal)
+        gasto = float(input("Informe o gasto do Mês "+str(count+1)+" : "))
+        gasto_func.append(gasto)
+        count = count + 1
+    except:
+        print("Valor Invalido.")
+
 
 print("Nome Completo: "+nome_func+" "+sobrenome_func)
 
