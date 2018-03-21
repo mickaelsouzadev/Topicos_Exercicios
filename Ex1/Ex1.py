@@ -29,9 +29,12 @@ def calculaImpostoRenda(soma_sal):
         imposto_renda = soma_sal * 0.275
         return imposto_renda
 
-def calculaPoupanca(sal_func, gasto_func)
+def calculaPoupanca(sal_func, gasto_func):
+    poupanca = []
     for i in range(0,12):
-        poupanca = sal_func[i] - gasto_func[i]
+        poupanca.append(sal_func[i] - gasto_func[i])
+        poupanca[i] = (poupanca[i] + poupanca[i])
+
     return poupanca
 
 
@@ -49,9 +52,16 @@ while count < 12:
     try:
         sal = float(input("Informe o salário do Mês "+str(count+1)+" : "))
         sal_func.append(sal)
+
         gasto = float(input("Informe o gasto do Mês "+str(count+1)+" : "))
         gasto_func.append(gasto)
+        if (gasto > sal):
+            raise Exception('Gasto Demais, não pode!')
+
+
         count = count + 1
+    except Exception as e:
+        print(str(e))
     except:
         print("Valor Invalido.")
 
@@ -63,6 +73,9 @@ print("Soma dos salários é: "+str(soma_sal))
 
 media_sal = mediaSal(sal_func)
 print("A Média dos salários é: "+str(media_sal))
+
+poupanca = calculaPoupanca(sal_func, gasto_func)
+print('Sua Poupança é: '+str(poupanca))
 
 imposto_renda = calculaImpostoRenda(soma_sal)
 print("Seu imposto de renda é: "+str(imposto_renda))
