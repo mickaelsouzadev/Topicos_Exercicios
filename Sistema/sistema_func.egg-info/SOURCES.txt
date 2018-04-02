@@ -1,0 +1,8 @@
+setup.py
+Core/Funcionario.py
+Core/__init__.py
+Core/main.py
+sistema_func.egg-info/PKG-INFO
+sistema_func.egg-info/SOURCES.txt
+sistema_func.egg-info/dependency_links.txt
+sistema_func.egg-info/top_level.txt
