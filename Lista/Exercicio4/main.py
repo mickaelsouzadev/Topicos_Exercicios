@@ -1,5 +1,5 @@
 
-con = ['a', 'b', 'c' , 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'r', 's', 't', 'v', 'x', 'w', 'y', 'z']
+con = ['b', 'c' , 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'r', 's', 't', 'v', 'x', 'w', 'y', 'z']
 
 char = []
 i = 0
@@ -21,3 +21,9 @@ while i < len(con):
     i+=1
 print('Total de Consoantes: '+str(count))
 print('Consoantes: '+str(charCon))
+
+for i in range(len(con)):
+    if con[i] in char:
+        charCon.append(con[i])
+        count+=1
+
