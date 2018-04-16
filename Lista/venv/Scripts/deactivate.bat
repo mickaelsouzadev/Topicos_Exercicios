@@ -1,5 +1,26 @@
 @echo off
 
+<<<<<<< HEAD
+if defined _OLD_VIRTUAL_PROMPT (
+    set "PROMPT=%_OLD_VIRTUAL_PROMPT%"
+)
+set _OLD_VIRTUAL_PROMPT=
+
+if defined _OLD_VIRTUAL_PYTHONHOME (
+    set "PYTHONHOME=%_OLD_VIRTUAL_PYTHONHOME%"
+    set _OLD_VIRTUAL_PYTHONHOME=
+)
+
+if defined _OLD_VIRTUAL_PATH (
+    set "PATH=%_OLD_VIRTUAL_PATH%"
+)
+
+set _OLD_VIRTUAL_PATH=
+
+set VIRTUAL_ENV=
+
+:END
+=======
 set VIRTUAL_ENV=
 
 REM Don't use () to avoid problems with them in %PATH%
@@ -17,3 +38,4 @@ if not defined _OLD_VIRTUAL_PATH goto ENDIFVPATH
     set "PATH=%_OLD_VIRTUAL_PATH%"
     set _OLD_VIRTUAL_PATH=
 :ENDIFVPATH
+>>>>>>> 5b0d77cc58c2fb754482df8bcadb214a90fea887
